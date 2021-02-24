@@ -14,15 +14,17 @@ import java.util.Arrays;
  */
 public class Solution_1 {
 	public static int[] bubbleSort(int[] array) {
-		// Write your code here.
-		for (int i = 0; i < array.length; i++) {
-			for (int j = i + 1; j < array.length; j++) {
+		if(array.length == 0 || array.length == 1) {
+			return array;
+		}
+		int length = array.length;
+		for (int i = 0; i < length; i++) {
+			for (int j = i + 1; j < length; j++) {
 				if (array[i] > array[j]) {
 					int temp = array[i];
 					array[i] = array[j];
 					array[j] = temp;
 				}
-
 			}
 		}
 		return array;
