@@ -27,9 +27,9 @@ public class Solution_1 {
 		}
 		return array;
 	}
-	
+
 	public static void main(String[] args) {
-		int[] a = {5,4,3,2,1};
+		int[] a = { 5, 4, 3, 2, 1 };
 		int[] b = bubbleSort(a);
 		System.out.println(Arrays.toString(b));
 	}
