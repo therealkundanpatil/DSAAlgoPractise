@@ -14,7 +14,7 @@ import java.util.Arrays;
  */
 public class Solution_1 {
 	public static int[] insertionSort(int[] array) {
-		if (array.length == 0) {
+		if (array.length == 0 || array.length == 1) {
 			return array;
 		}
 
