@@ -35,7 +35,7 @@ public class Solution_1 {
 		return array;
 	}
 
-	public int getIndex(int[] array, int element) {
+	private int getIndex(int[] array, int element) {
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] == element) {
 				return i;
@@ -45,7 +45,7 @@ public class Solution_1 {
 		return -1;
 	}
 
-	public int getSum(int[] array, int end) {
+	private int getSum(int[] array, int end) {
 		int sum = 0;
 		for (int i = 0; i < end; i++) {
 			sum += array[i];

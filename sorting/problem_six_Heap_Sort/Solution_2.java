@@ -28,7 +28,7 @@ public class Solution_2 {
 		return array;
 	}
 
-	public static void heapify(int[] array, int n, int i) {
+	private static void heapify(int[] array, int n, int i) {
 		int largest = i;
 		int l = 2 * i + 1;
 		int r = 2 * i + 2;

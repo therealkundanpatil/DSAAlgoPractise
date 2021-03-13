@@ -21,14 +21,14 @@ public class Solution_1 {
 		return array;
 	}
 
-	public static void buildMaxHeap(int[] array) {
+	private static void buildMaxHeap(int[] array) {
 		int firstParentIndex = (array.length - 2) / 2;
 		for (int currentIndex = firstParentIndex; currentIndex >= 0; currentIndex--) {
 			siftDown(array, currentIndex, array.length - 1);
 		}
 	}
 
-	public static void siftDown(int[] heap, int currentIndex, int endIndex) {
+	private static void siftDown(int[] heap, int currentIndex, int endIndex) {
 		int childOneIndex = 2 * currentIndex + 1;
 		while (childOneIndex <= endIndex) {
 			int childTwoIndex = 2 * currentIndex + 2 <= endIndex ? 2 * currentIndex + 2 : -1;
