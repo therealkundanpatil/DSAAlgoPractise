@@ -29,7 +29,7 @@ public class Solution_1 {
 		return array;
 	}
 
-	public static int findMinimum(int[] array, int index) {
+	private static int findMinimum(int[] array, int index) {
 		int smallestValue = Integer.MAX_VALUE;
 		int smallestIndex = index;
 		int n = array.length;
@@ -43,7 +43,7 @@ public class Solution_1 {
 		return smallestIndex;
 	}
 
-	public static void swap(int[] array, int i, int j) {
+	private static void swap(int[] array, int i, int j) {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
