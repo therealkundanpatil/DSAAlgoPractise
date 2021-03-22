@@ -31,7 +31,7 @@ public class Solution_1 {
 		return array;
 	}
 
-	public static void swap(int[] array, int i, int j) {
+	private static void swap(int[] array, int i, int j) {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
