@@ -25,7 +25,7 @@ public class Solution_1 {
 		return mergeSortedArrays(mergeSort(leftHalf), mergeSort(rightHalf));
 	}
 
-	public static int[] mergeSortedArrays(int[] leftHalf, int[] rightHalf) {
+	private static int[] mergeSortedArrays(int[] leftHalf, int[] rightHalf) {
 		int[] sortedArray = new int[leftHalf.length + rightHalf.length];
 		int i = 0;
 		int j = 0;
@@ -48,5 +48,11 @@ public class Solution_1 {
 		}
 
 		return sortedArray;
+	}
+
+	public static void main(String args[]) {
+		int[] a = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		int[] b = mergeSort(a);
+		System.out.println(Arrays.toString(b));
 	}
 }
