@@ -1,5 +1,7 @@
 package sorting.problem_six_Heap_Sort;
 
+import java.util.Arrays;
+
 /**
  * Heap Sort Algorithm
  * 
@@ -45,5 +47,11 @@ public class Solution_2 {
 			array[largest] = swap;
 			heapify(array, n, largest);
 		}
+	}
+
+	public static void main(String args[]) {
+		int[] a = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		int[] b = heapSort(a);
+		System.out.println(Arrays.toString(b));
 	}
 }
