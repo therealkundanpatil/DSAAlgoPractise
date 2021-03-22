@@ -1,5 +1,7 @@
 package sorting.problem_five_Quick_Sort;
 
+import java.util.Arrays;
+
 /**
  * Quick Sort Algorithm
  * 
@@ -20,7 +22,7 @@ public class Solution_2 {
 		return array;
 	}
 
-	public static void quickSort(int[] array, int start, int end) {
+	private static void quickSort(int[] array, int start, int end) {
 		if (start < end) {
 			int partitionIndex = partition(array, start, end);
 			quickSort(array, start, partitionIndex - 1);
@@ -46,5 +48,11 @@ public class Solution_2 {
 		array[end] = temp;
 
 		return (i + 1);
+	}
+	
+	public static void main(String args[]) {
+		int[] a = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		int[] b = quickSort(a);
+		System.out.println(Arrays.toString(b));
 	}
 }
