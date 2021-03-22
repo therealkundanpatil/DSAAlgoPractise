@@ -1,5 +1,7 @@
 package sorting.problem_four_Three_Number_Sort;
 
+import java.util.Arrays;
+
 /**
  * Three Number Sort
  * 
@@ -11,7 +13,7 @@ package sorting.problem_four_Three_Number_Sort;
  *
  */
 public class Solution_2 {
-	public int[] threeNumberSort(int[] array, int[] order) {
+	public static int[] threeNumberSort(int[] array, int[] order) {
 		// Write your code here.
 		int firstValue = order[0];
 		int thirdValue = order[2];
@@ -35,9 +37,16 @@ public class Solution_2 {
 		return array;
 	}
 
-	public void swap(int[] array, int i, int j) {
+	private static void swap(int[] array, int i, int j) {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
+	}
+
+	public static void main(String args[]) {
+		int[] array = { 1, 0, 0, -1, -1, 0, 1, 1 };
+		int[] order = { 0, 1, -1 };
+		int[] customSortedArray = threeNumberSort(array, order);
+		System.out.println(Arrays.toString(customSortedArray));
 	}
 }
