@@ -1,7 +1,9 @@
 package sorting.problem_four_Three_Number_Sort;
 
+import java.util.Arrays;
+
 /**
- * Three Number Sort 
+ * Three Number Sort
  * 
  * Time Complexity : O(n)
  * 
@@ -11,7 +13,7 @@ package sorting.problem_four_Three_Number_Sort;
  *
  */
 public class Solution_3 {
-	public int[] threeNumberSort(int[] array, int[] order) {
+	public static int[] threeNumberSort(int[] array, int[] order) {
 		// Write your code here.
 		int firstValue = order[0];
 		int secondValue = order[1];
@@ -36,9 +38,16 @@ public class Solution_3 {
 		return array;
 	}
 
-	public void swap(int[] array, int i, int j) {
+	public static void swap(int[] array, int i, int j) {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
+	}
+
+	public static void main(String args[]) {
+		int[] array = { 1, 0, 0, -1, -1, 0, 1, 1 };
+		int[] order = { 0, 1, -1 };
+		int[] customSortedArray = threeNumberSort(array, order);
+		System.out.println(Arrays.toString(customSortedArray));
 	}
 }
